@@ -1,3 +1,5 @@
+---
+---
 # Action, history and the chicken and egg problem
 
 The design behind the following database structure is to implement a history of a row in a table and a rigid update procedure.
@@ -153,8 +155,8 @@ The examples in this document will create some confusion because we are using th
 	BEGIN  
 	result = (select count(*) from actiontransition where entryactionid = old.rowactionid and exitactionid = new.rowactionid);  
 	if (result = 0) then  
-		RAISE EXCEPTION 'No action transition from "%" to "%"', old.rowactionid, new.rowactionid;  
-		return null;  
+	    RAISE EXCEPTION 'No action transition from "%" to "%"', old.rowactionid, new.rowactionid;  
+	    return null;  
 	end if;	  
 	return new;  
 	END;  
@@ -194,4 +196,4 @@ The examples in this document will create some confusion because we are using th
 	  LANGUAGE plpgsql VOLATILE  
 	  COST 100;  
 	ALTER FUNCTION modify_operator()  
-OWNER TO postgres;
+	OWNER TO postgres;
