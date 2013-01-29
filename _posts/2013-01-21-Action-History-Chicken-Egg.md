@@ -1,5 +1,7 @@
 ---
+layout: default
 title: Action, history and the chicken and egg problem
+published: false
 ---
 # Action, history and the chicken and egg problem
 
@@ -18,11 +20,13 @@ Each table at least have the following system meta data columns:
 - rowoperatorid of type character
 - rowactionid of type character
 
+ps. As I played around with 
+
 The examples in this document will create some confusion because we are using the Operator id as the rowoperatorid. So for the operator table you will have a id and rowoperatorid with a constraint to itself on the id column, hence my chicken and egg problem. But for simplistic sake I just dropped the constraint.
 
 # Triggers
 
-
+Firstly the trigger in the appendix is wrong for calculating the revision number.
 
 # Appendix
 
