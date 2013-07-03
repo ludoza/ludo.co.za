@@ -72,8 +72,8 @@ table{
 \*------------------------------------*/
 /* GO! */
 
-a:link {color: #00ff00;}
-a:active {color: #0000ff;}
+a:link {color: #ffffff;}
+a:active {color: #ffffff;}
 a:visited {color: #ffffff;}
 a:hover {color: #000000; text-decoration: none; }
 
